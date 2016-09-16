@@ -1,0 +1,1 @@
+define([],function(){var e={};Object.defineProperty(e,"PAGE_UPDATE",{value:"page_update",writable:!1,enumerable:!1,configurable:!1}),Object.defineProperty(e,"BLOCK_UPDATE",{value:"block_update",writable:!1,enumerable:!1,configurable:!1});var r={ROUTING:e};return r});

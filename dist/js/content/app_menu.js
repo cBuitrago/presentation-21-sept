@@ -1,0 +1,1 @@
+define(["jquery","core_facade","content_buttons_app_menu_toggle"],function(n,e,o){var t,_=function(n){t=n;var e=new o("#app_menu_icon","#app_menu_closed","#app_menu_open");e.events.on(o.TOGGLE,u)},u=function(n){console.log("ok got it",n)},c={init:_};return c});

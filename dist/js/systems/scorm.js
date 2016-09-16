@@ -1,0 +1,1 @@
+define(["core_facade","scorm"],function(n,c){var e=function(n){},i={init:e};return i});

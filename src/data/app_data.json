@@ -1,0 +1,91 @@
+{
+    "version": "0.0.1b",
+    "navigationType":"page",
+    "systemsStart":
+    {
+        "scorm": "off",
+        "routing": "on",
+        "page": true
+    },
+    "sceneList":
+    [
+        "preloader",
+        "popup",
+        "progress",
+        "navigation",
+        "alert",
+        "popup",
+        "content"
+    ],
+    "progress":
+    {
+        "startLocation": "mainProgress",
+        "mainProgress":
+        {
+            "html": "content/progress.html"
+        }
+    },
+    "navigation":
+    {
+        "startLocation": "mainNavigation",
+        "mainNavigation":
+        {
+            "html": "content/app_menu.html"
+        }
+    },
+    "content":
+    {
+        "startLocation": "p1_b1",
+        "p1_b1":
+        {
+            "prevId":null,
+            "nextId":"p1_b2",
+            "complete":true,
+            "html":"content/p1_b1.html",
+            "data":
+            {
+
+            }
+        },
+        "p1_b2":
+        {
+            "nextId":"p1_b3",
+            "complete":false,
+            "html":"content/p1_b2.html",
+            "data":
+            {
+
+            }
+        },
+        "p1_b3":
+        {
+            "nextId":"p1_b4",
+            "complete":true,
+            "html":"content/p1_b3.html",
+            "data":
+            {
+
+            }
+        },
+        "p1_b4":
+        {
+            "nextId":"p1_b5",
+            "complete":true,
+            "html":"content/p1_b4.html",
+            "data":
+            {
+
+            }
+        },
+        "p1_b5":
+        {
+            "nextId":null,
+            "complete":true,
+            "html":"content/p1_b5.html",
+            "data":
+            {
+
+            }
+        }
+    }
+}
