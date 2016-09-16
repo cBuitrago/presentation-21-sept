@@ -6468,5 +6468,42 @@ input[type=range]:focus::-ms-fill-upper {
   padding-left: 20px;
   margin-right: 30px;
   line-height: 40px;
+  cursor: pointer;
+}
+.rondelle-resultats {
+  position: absolute;
+  width: 80px;
+  height: auto;
+  top: -32px;
+  left: -32px;
+}
+.rondelle-resultats + div h2 {
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+.p5-title {
+  height: 20vh;
+}
+.p5-title h1 {
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 20vh;
+  font-size: 3rem;
+}
+.p5-projet {
+  height: 60vh;
+}
+.p5-projet h3 {
+  font-size: 2rem;
+}
+.p5-projet h5 {
+  font-size: 2.5rem;
+}
+.p5-budget {
+  height: 20vh;
+}
+.p5-budget h4 {
+  font-size: 3rem;
 }
 /*# sourceMappingURL=main.css.map */
