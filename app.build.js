@@ -13,6 +13,7 @@
             include:
             [
                 "content_p1_b2",
+                "content_p1_b4",
                 "constants_core_controller",
                 "constants_core_view",
                 "core_facade",
@@ -28,6 +29,9 @@
                 "utilities_query_params",
                 "utilities_button_injector",
                 "utilities_progress_tracker",
+                "utilities/carousel",
+                "utilities/transition",
+                "utilities/modal",
                 "jquery",
                 "minivents",
                 "preloadjs",
@@ -46,6 +50,7 @@
     paths:
     {
         content_p1_b2: "content/p1_b2",
+        content_p1_b4: "content/p1_b4",
         constants_core_controller: "constants/core_controller",
         constants_core_view: "constants/core_view",
         constants_systems: "constants/systems",
@@ -63,6 +68,9 @@
         utilities_query_params: "utilities/query_params",
         utilities_button_injector: "utilities/button_injector",
         utilities_progress_tracker: "utilities/progress_tracker",
+        utilities_carousel: "utilities/carousel",
+        utilities_transition: "utilities/transition",
+        utilities_modal: "utilities/modal",
         jquery: "external/jquery-3.0.0.min",
         minivents: "external/minivents.amd.min",
         preloadjs: "external/preloadjs-0.6.2.min",

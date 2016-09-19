@@ -1,6 +1,10 @@
 .modal-dialog{
     width: 100%;
     margin: 0 auto;
+    margin-top: 60px;
+}
+.modal-header{
+    .bg-color-9;
 }
 .modal-content{
     button.close{
@@ -11,19 +15,28 @@
         font-size: 50px;
     }
 }
+
 //xs - extra-small : between 480px - 639px
 @media (min-width: 480px){
     .modal-dialog{
         width: 100%;
         margin: 0 auto;
+        margin-top: 40px;
     }
 }
 //sm - small : between 640px - 1023px
 @media (min-width: 640px){
-    
+    .modal-dialog{
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
 }
 //md - medium : between 1024px - 1439px
 @media (min-width: 1024px){
+    .modal-dialog{
+        margin-top: 0px;
+    }
     .page_2-ul{
         ul.carousel-indicators{
             width: 80%;
@@ -33,5 +46,6 @@
 }
 //lg - large : min 1440px
 @media (min-width: 1440px){
-
+    .modal-dialog{
+    }
 }

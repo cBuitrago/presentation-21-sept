@@ -7,6 +7,7 @@ require.config
             content_app_menu: "content/app_menu",
             content_buttons_app_menu_toggle: "content/buttons/app_menu_toggle",
             content_p1_b2: "content/p1_b2",
+            content_p1_b4: "content/p1_b4",
             constants_core_controller: "constants/core_controller",
             constants_core_view: "constants/core_view",
             constants_systems: "constants/systems",

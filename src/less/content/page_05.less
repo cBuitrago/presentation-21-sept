@@ -1,14 +1,18 @@
+.over-hidden{
+    overflow: hidden;
+}
 .rondelle-resultats{
     position: absolute;
-    width: 80px;
+    width: 40px;
     height: auto;
-    top: -32px;
-    left: -32px;
+    top: -16px;
+    left: -16px;
     +div{
         h2{
-            margin-left: 20px;
+            margin-left: 12px;
+            margin-top: 12px;
             font-weight: bold;
-            font-size: 2.2rem;
+            font-size: 1.5rem;
         }
     }
 
@@ -19,24 +23,85 @@
         margin-bottom: 0;
         margin-top: 0;
         line-height: 20vh;
-        font-size: 3rem;
+        font-size: 1.3rem;
     }
 }
 .p5-projet{
-    height: 60vh;
+    min-height: 60vh;
         h3{
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
     h5{
-        font-size: 2.5rem;
+        font-size: 1.4rem;
     }
     div.item-projet{
-        height: 30vh;
+        min-height: 20vh;
     }
 }
 .p5-budget{
-    height: 20vh;
+    min-height: 20vh;
+    h2{
+        font-size: 1.5rem;
+    }
     h4{
-        font-size: 3rem;
+        font-size: 1.8rem;
+    }
+}
+
+//xs - extra-small : between 480px - 639px
+@media (min-width: 480px){
+    
+}
+//sm - small : between 640px - 1023px
+@media (min-width: 640px){
+    
+}
+//md - medium : between 1024px - 1439px
+@media (min-width: 1024px){
+    
+}
+//lg - large : min 1440px
+@media (min-width: 1440px){
+    .rondelle-resultats{
+        position: absolute;
+        width: 80px;
+        height: auto;
+        top: -32px;
+        left: -32px;
+        +div{
+            h2{
+                margin-left: 20px;
+                font-weight: bold;
+                font-size: 2rem;
+            }
+        }
+
+    }
+    .p5-title{
+        height: 20vh;
+        h1{
+            margin-bottom: 0;
+            margin-top: 0;
+            line-height: 20vh;
+            font-size: 2.6rem;
+        }
+    }
+    .p5-projet{
+        height: 60vh;
+            h3{
+            font-size: 1.8rem;
+        }
+        h5{
+            font-size: 2.2rem;
+        }
+        div.item-projet{
+            height: 30vh;
+        }
+    }
+    .p5-budget{
+        height: 20vh;
+        h4{
+            font-size: 2.7rem;
+        }
     }
 }

@@ -54,6 +54,11 @@ define
                 Facade.view.addObserver("content", contentItem);
                 $("#content_" + contentItem).load(_appData.content[contentItem].html);
                 
+                if (requirejs.s.contexts._.config.paths.hasOwnProperty("content_" + contentItem) === true)
+                {
+                    require(["content_" + contentItem],function(Block){Block.init(contentItem);})
+                }
+                
                 _pageList.push(contentItem);
                 
                 if (_appData.content[contentItem].complete === false)
