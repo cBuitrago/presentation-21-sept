@@ -6500,6 +6500,9 @@ input[type=range]:focus::-ms-fill-upper {
 .p5-projet h5 {
   font-size: 2.5rem;
 }
+.p5-projet div.item-projet {
+  height: 30vh;
+}
 .p5-budget {
   height: 20vh;
 }
