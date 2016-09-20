@@ -18,11 +18,11 @@ define
             _progressTracker.addEventListener(ProgressTracker.PROGRESS_COMPLETE, _completeMe);
             _progressTracker.completeItem(0);
             $(".p1_b2_progress").click(_onDataSlide);
-            
             $('#temps').on("change", resultats);
             $('#participants').on("change", resultats);
             $('#geographic').on("change", resultats);
             $('#roulement').on("change", resultats);
+            resultats();
         }
         
         var _onDataSlide = function(event)
@@ -37,28 +37,38 @@ define
             Facade.controller.dispatchEvent(ControllerConstants.BLOCK_COMPLETE);
         }
         
-        
-        
         var resultats = function(event)
         {
-            event.currentTarget.attributes["data-slide-to"].value
-            var participants = $('#participants').val();
-            var temp = $('#temps').val();
-            var geo = $('#geographic').val();
-            var roulement = $('#roulement').val();
-            var width_eLearning = (participants * .00008333) + (temp * .04794521) + (roulement * .03);
-            var width_virtual = (participants * .00025) + (temp * .04794521) + (roulement * .3);
-            var width_classe = (participants * .00041667) + (temp * .03424658) + (geo * .0125) + (roulement * .25);
+            var participants = $('#participants').val() / 60000;
+            var temp = $('#temps').val() / 730;
+            var geo = $('#geographic').val() / 2000;
+            var roulement = $('#roulement').val() / 100;
+            
+            //e-learning
+            var pL = participants < .1 ? .1 : participants;
+            var gL = geo < .1 ? .1 : geo;
+            var rL = roulement < .1 ? .1 : roulement;
+            var tL = temp > .9 ? .9 : temp;
+            var width_eLearning = ((( pL* .7) + (gL * .1) + ( 1 - (tL * .4)) + (rL * .5)) / 4) * 100;
+            
+            //virtual
+            var pV = participants < .25 ? .25 : participants;
+            var gV = geo < .25 ? .25 : geo;
+            var rV = roulement < .25 ? .25 : roulement;
+            var tV = temp > .75 ? .75 : temp;
+            var width_virtual = (((pV * .7) + (gV * .5) + (1 - (tV * .7)) + (rV * .7)) / 4) * 100;
+            
+            //classe
+            var pC = participants < .4 ? .4 : participants;
+            var gC = geo < .4 ? .4 : geo;
+            var rC = roulement < .4 ? .4 : roulement;
+            var tC = temp > .6 ? .6 : temp;
+            var width_classe = (((pC) + ( 1 - tC) + (gC) + (rC)) / 4) * 100;
+            
             $('#eLearning').css('width', width_eLearning + '%');
             $('#virtual').css('width', width_virtual + '%');
             $('#classe').css('width', width_classe + '%');
         }
-        
-        resultats();
-        
-        
-        
-        
         
         var public = 
         {
