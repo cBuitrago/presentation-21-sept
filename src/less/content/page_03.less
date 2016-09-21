@@ -4,9 +4,19 @@
     margin-top: 60px;
 }
 .modal-header{
+    padding-top: 8px;
+    padding-bottom: 0;
+    padding-right: 15px;
     .bg-color-9;
+    border-bottom-width: 0;
+    .close{
+        font-size: 3rem;
+    }
 }
 .modal-content{
+    -webkit-box-shadow: none;
+    box-shadow:none;
+    border-width: 0;
     button.close{
         position: absolute;
         top: 0;
@@ -21,21 +31,22 @@
     .modal-dialog{
         width: 100%;
         margin: 0 auto;
-        margin-top: 40px;
+        margin-top: 5%;
     }
 }
 //sm - small : between 640px - 1023px
 @media (min-width: 640px){
     .modal-dialog{
-        width: 100%;
+        width: 95%;
         margin: 0 auto;
-        margin-top: 10px;
+        margin-top: 4%;
     }
 }
 //md - medium : between 1024px - 1439px
 @media (min-width: 1024px){
     .modal-dialog{
-        margin-top: 0px;
+        width: 90%;
+        margin-top: 7%;
     }
     .page_2-ul{
         ul.carousel-indicators{
@@ -47,5 +58,7 @@
 //lg - large : min 1440px
 @media (min-width: 1440px){
     .modal-dialog{
+        width: 80%;
+        margin-top: 2%;
     }
 }

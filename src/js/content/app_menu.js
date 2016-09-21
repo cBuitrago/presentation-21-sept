@@ -14,12 +14,27 @@ define
             _contentId = contentId;
             
             var menuToggle = new MenuToggle("#app_menu_icon", "#app_menu_closed", "#app_menu_open");
-            menuToggle.events.on(MenuToggle.TOGGLE, _onChange);
+            //menuToggle.events.on(MenuToggle.TOGGLE, _onChange);
+            $ ( "div#app_menu_icon" ).click(_onChange);
+            $ ( "ul#main_menu_list li a" ).click(_onClose);
         }
         
         var _onChange = function(isOpen)
         {
             //show or hide menu
+            $( "div#safe" ).toggleClass('visible');
+            $( "ul#main_menu_list" ).toggleClass('nav-collapse');
+        }
+        
+        var _onClose = function(event)
+        {
+            $ ( '#app_menu_icon' ).click();
+            $ ("html, body").animate({ scrollTop: $( event.currentTarget.attributes["href"].value).position().top }, 500);
+        }
+        
+        var _onScrollDown = function()
+        {
+            
         }
         
         var public = 

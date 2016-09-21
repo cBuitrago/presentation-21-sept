@@ -4,19 +4,24 @@
         height: 33vh;
         clear: both;
         .centered{
-            text-align: center;
+            text-align: left;
             width: 100%;
             a.btn-suivant{
                 width: 200px;
                 height: 40px;
                 border-radius: 20px;
-                .bg-color-8;
+                .bg-color-3;
                 color: @color-9;
                 text-align: center;
                 text-decoration: none;
                 display: block;
                 line-height: 40px;
                 cursor: pointer;
+                font-weight: bold;
+                img{
+                    width: 10px;
+                    height: auto;
+                }
             }
             div{
                 h2{
@@ -70,16 +75,11 @@
                     cursor: pointer;
                 }
                 li.active{
-                    .border-color-1;
-                    border-width: 1px;
-                    border-style: solid;
+                    .bg-color-3;
+                    color: @color-9;
                 }
             }
         }
-    }
-    span{
-        margin-left: 10px;
-        margin-right: 10px;
     }
 }
 
@@ -128,10 +128,11 @@
             .centered{
                 text-align: left;
                 a.btn-suivant{
+                    font-size: 1.3rem;
                 }
                 div{
                     h2{
-                        font-size: 1.3rem;
+                        font-size: 1.6rem;
                     }
                 }
             }
@@ -150,7 +151,7 @@
                 h1{
                     margin-left: 60px;
                     line-height: 50px;
-                    font-size: 1.5rem;
+                    font-size: 1.6rem;
                 }
             }
             div{
@@ -160,6 +161,7 @@
                         margin-top: 12px;
                         margin-bottom: 12px;
                         width: 65%;
+                        font-size: 1.3rem;
                     }
                 }
             }
@@ -172,7 +174,16 @@
         .vertical-center{
             .centered{
                 a.btn-suivant{
-                    
+                    width: 14%;
+                    height: 6vh;
+                    border-radius: 3vh;
+                    line-height: 6vh;
+                    font-size: 1.3rem;
+                }
+                div{
+                    h2{
+                        font-size: 1.6rem;
+                    }
                 }
             }
             .rondelle{
@@ -180,7 +191,7 @@
                 height: 80px;
                 p{
                     line-height: 80px;
-                    font-size: 1.5rem;
+                    font-size: 1.6rem;
                 }
 
             }
@@ -196,7 +207,11 @@
                     display: block;
                     li{
                         display: inline-block;
-                        width: 25%;
+                        height: 6vh;
+                        border-radius: 3vh;
+                        line-height: 6vh;
+                        width: 22%;
+                        font-size: 1.2rem;
                     }
                 }
             }
@@ -209,7 +224,16 @@
     .vertical-center{
         .centered{
             a.btn-suivant{
-               
+                width: 14%;
+                height: 6vh;
+                border-radius: 3vh;
+                line-height: 6vh;
+                font-size: 1.5rem;
+            }
+            div{
+                h2{
+                    font-size: 1.8rem;
+                }
             }
         }
         .rondelle{
@@ -229,7 +253,11 @@
         div{
             ul{
                 li{
+                    height: 6vh;
+                    border-radius: 3vh;
+                    line-height: 6vh;
                     width: 22%;
+                    font-size: 1.3rem;
                 }
             }
         }

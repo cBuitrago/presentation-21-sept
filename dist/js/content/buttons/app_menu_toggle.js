@@ -1,1 +1,62 @@
-define(["jquery","tweenmax","minivents"],function(e,s,i){function t(s,t,d){this.elementId=s,this.closedId=t,this.openId=d,this.isOpen=!1,this.events=new i,e(this.closedId).removeClass("hide"),e(this.openId).removeClass("hide"),e(this.elementId).addClass("button-mode"),e(this.elementId).on("click",e.proxy(n,this))}Object.defineProperty(this,"TOGGLE",{value:"toggle",writable:!1,enumerable:!1,configurable:!1}),this.elementId,this.closedId,this.openId,this.isOpen,this.events;var n=function(s){this.isOpen?(e(this.closedId).removeClass("hide"),e(this.openId).addClass("hide")):(e(this.closedId).addClass("hide"),e(this.openId).removeClass("hide")),this.isOpen=!this.isOpen,this.events.emit(TOGGLE,this.isOpen)};return t.prototype={},t.TOGGLE=TOGGLE,t});
+define
+(
+    [
+        "jquery",
+        "tweenmax",
+        "minivents"
+    ],
+    function($, TweenMax, Events)
+    {
+        //console.log(TweenMax);
+        Object.defineProperty(this, "TOGGLE", {value:"toggle", writable:false, enumerable:false, configurable:false});
+        
+        this.elementId;
+        this.closedId;
+        this.openId;
+        
+        this.isOpen;
+        this.events;
+        
+        function _contructor(elementId, closedId, openId)
+        {
+            this.elementId = elementId;
+            this.closedId = closedId;
+            this.openId = openId;
+            
+            this.isOpen = false;
+            this.events = new Events();
+            
+            //console.log(TweenMax);
+            
+            //TweenMax.to($(this.closedId), 0, {css:{opacity:0}});
+            //TweenMax.to($(this.openId), 0, {css:{opacity:0}});
+            
+            $(this.closedId).removeClass("hide");
+            $(this.openId).removeClass("hide");
+            
+            $(this.elementId).addClass("button-mode");
+            $(this.elementId).on("click", $.proxy(_toggleMenu, this));
+        }
+        
+        var _toggleMenu = function(event)
+        {
+            if (this.isOpen)
+            {
+                $(this.closedId).removeClass("hide");
+                $(this.openId).addClass("hide");
+            }
+            else
+            {
+                $(this.closedId).addClass("hide");
+                $(this.openId).removeClass("hide");
+            }
+            this.isOpen = !this.isOpen;
+            this.events.emit(TOGGLE, this.isOpen);
+        }
+        
+        _contructor.prototype = { }
+        _contructor.TOGGLE = TOGGLE;
+
+        return _contructor;
+    }
+);

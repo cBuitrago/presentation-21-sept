@@ -1,1 +1,16 @@
-define([],function(){var e={};Object.defineProperty(e,"PAGE_UPDATE",{value:"page_update",writable:!1,enumerable:!1,configurable:!1}),Object.defineProperty(e,"BLOCK_UPDATE",{value:"block_update",writable:!1,enumerable:!1,configurable:!1});var r={ROUTING:e};return r});
+define
+(
+    function()
+    {
+        var _routing = {};
+        Object.defineProperty(_routing, "PAGE_UPDATE", {value:"page_update", writable:false, enumerable:false, configurable:false});
+        Object.defineProperty(_routing, "BLOCK_UPDATE", {value:"block_update", writable:false, enumerable:false, configurable:false});
+        
+        var public = 
+        {
+            ROUTING: _routing
+        }
+
+        return public;
+    }
+);
